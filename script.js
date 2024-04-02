@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const url = 'https://api.thecatapi.com/v1/images/search';
 const button = document.querySelector('button');
-const tableBody = document.querySelector('#tablebody');
+const tableBody = document.querySelector('#table-body');
 class Cat {
     constructor(id, url, width, height) {
         this.id = id;
@@ -28,12 +28,10 @@ class WebDispaly {
       <td><img src="${cat.url}" /></td>
       <td>${cat.width.toString()}</td>
       <td>${cat.height.toString()}</td>
+      <td>${cat.url}</td>
       <td><a href=#>X</a></td>
     `;
         tableBody === null || tableBody === void 0 ? void 0 : tableBody.appendChild(tableRow);
-        console.log(date);
-        console.log(tableBody);
-        console.log(document.querySelector('#table-body'));
     }
     static deleteDate(deleteButton) {
         const td = deleteButton.parentElement;

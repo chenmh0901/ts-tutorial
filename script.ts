@@ -1,6 +1,6 @@
 const url: string = 'https://api.thecatapi.com/v1/images/search';
 const button: HTMLButtonElement | null = document.querySelector('button');
-const tableBody: HTMLTableElement | null = document.querySelector('#tablebody');
+const tableBody: HTMLTableElement | null = document.querySelector('#table-body');
 interface CatType {
   id: string;
   url: string;
@@ -30,13 +30,10 @@ class WebDispaly {
       <td><img src="${cat.url}" /></td>
       <td>${cat.width.toString()}</td>
       <td>${cat.height.toString()}</td>
+      <td>${cat.url}</td>
       <td><a href=#>X</a></td>
     `
     tableBody?.appendChild(tableRow);
-    console.log(date);
-    console.log(tableBody);
-    console.log(document.querySelector('#table-body'));
-
   }
   public static deleteDate(deleteButton: HTMLAnchorElement): void {
     const td = deleteButton.parentElement;
